@@ -1,0 +1,6 @@
+/*
+Date
+https://developer.mozilla.org/en-US/
+*/
+
+var date = new Date();
