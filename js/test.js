@@ -4,7 +4,7 @@
         var h = canvas.height;
         var ctx = canvas.getContext("2d");
         var container = {x:0,y:0,width:1200,height:800};
-        var rects = [];
+        var shape = [];
         var rect = (function () {
             // constructor
             function rect(id, x, y, r, vx, vy, fill, stroke, strokewidth) {
@@ -52,7 +52,9 @@
                 ctx.fillStyle = stroke;
                 ctx.strokeStyle = this.stroke;
                 ctx.lineWidth = this.strokewidth;
+                //add rectangle
                 //ctx.rect(this.x, this.y, this.width, this.height);
+                //add circle
                 ctx.arc(this.x+this.radius, this.y+this.radius, this.radius,0,2*Math.PI,false);
                 ctx.stroke();
                 ctx.closePath();
@@ -76,11 +78,11 @@
 
             // Put your mousemove stuff here
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (var i = 0; i < rects.length; i++) {
-                if (rects[i].isPointInside(mouseX, mouseY)) {
-                    rects[i].highlight();
+            for (var i = 0; i < shape.length; i++) {
+                if (shape[i].isPointInside(mouseX, mouseY)) {
+                    shape[i].highlight();
                 } else {
-                    rects[i].redraw();
+                    shape[i].redraw();
                 }
             }
         }
@@ -94,21 +96,21 @@
                 var vx = Math.floor(Math.random() * 4) + 2;
                 var vy = Math.floor(Math.random() * 4) + 2;
                 var color = Math.floor(Math.random() * ((255-0)+1) + 0)
-                rects.push(new rect("circle", x, y, r, vx, vy, color, color, 1));  
+                shape.push(new rect("circle", x, y, r, vx, vy, color, color, 1));  
             }
 
             function draw(){
                 ctx.clearRect(0, 0, 1200, 800);
-                for (var i = 0; i < rects.length; i++) {
-                    if((rects[i].x + rects[i].vx + rects[i].radius > container.x + container.width  - rects[i].radius) || (rects[i].x - rects[i].radius + rects[i].vx < container.x - rects[i].radius)){
-                        rects[i].vx = - rects[i].vx;
+                for (var i = 0; i < shape.length; i++) {
+                    if((shape[i].x + shape[i].vx + shape[i].radius > container.x + container.width  - shape[i].radius) || (shape[i].x - shape[i].radius + shape[i].vx < container.x - shape[i].radius)){
+                        shape[i].vx = - shape[i].vx;
                     }
-                    if((rects[i].y + rects[i].vy + rects[i].radius > container.y + container.height - rects[i].radius) || (rects[i].y - rects[i].radius + rects[i].vy < container.y - rects[i].radius)){
-                        rects[i].vy = - rects[i].vy;
+                    if((shape[i].y + shape[i].vy + shape[i].radius > container.y + container.height - shape[i].radius) || (shape[i].y - shape[i].radius + shape[i].vy < container.y - shape[i].radius)){
+                        shape[i].vy = - shape[i].vy;
                     }
-                    rects[i].x +=rects[i].vx;
-                    rects[i].y +=rects[i].vy;
-                    rects[i].move(rects[i].x , rects[i].y, 1, 1);
+                    shape[i].x +=shape[i].vx;
+                    shape[i].y +=shape[i].vy;
+                    shape[i].move(shape[i].x , shape[i].y, 1, 1);
                 }
                 requestAnimationFrame(draw);
             }
