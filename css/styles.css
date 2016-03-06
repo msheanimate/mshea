@@ -261,7 +261,6 @@ fieldset p {
 canvas {
   background: gray;
   display: block;
-  border: 1px black solid;
   width: 50%;
   height: 50%;
 }
