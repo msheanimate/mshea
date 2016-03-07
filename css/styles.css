@@ -1,0 +1,286 @@
+/**
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Lato', sans-serif;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  cursor: pointer;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+li {
+  color: gray;
+  font-size: 0.5rem;
+}
+
+/* change colours to suit your needs */
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+p {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+h1 {
+  font-size: 2em;
+  padding: 1em 0em 1em 0em;
+}
+
+h2 {
+  font-size: 2.25em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+nav ul li {
+  padding: 1em;
+  color: blue;
+}
+
+fieldset p {
+  padding: 0.5em;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+  color: green;
+  margin: 2em;
+}
+
+/*------End RESET--------------------------------------------------------------------------------------------------------*/
+/*------GRID BEGIN--------------------------------------------------------------------------------------------------------*/
+/*By default each col has 100% width*/
+.col {
+  display: table-cell;
+  width: inherit;
+  padding: .25em;
+  vertical-align: middle;
+}
+
+/*Thirteen colum layout - 7.6% */
+.thirteen-one, .thirteen-two, .thirteen-three, .thirteen-four, .thirteen-five, .thirteen-six, .thirteen-seven, .thirteen-eight, .thirteen-nine, .thirteen-ten,
+.thirteen-eleven, .thirteen-twelve, .thirteen-thirteen {
+  width: 7.6%;
+}
+
+/*Seven colum layout - 12.5% */
+.eight-one, .eight-two, .eight-three, .eight-four, .eight-five, .eight-six, .eight-seven, .eight-eight {
+  width: 12.5%;
+}
+
+/*Seven colum layout - 14% */
+.seven-one, .seven-two, .seven-three, .seven-four, .seven-five, .seven-six, .seven-seven {
+  width: 14.2%;
+}
+
+/*Six colum layout - 14% */
+.six-one, .six-two, .six-three, .six-four, .six-five, .six-six {
+  width: 16.6%;
+}
+
+/*Five colum layout - 20% */
+.five-one, .five-two, .five-three, .five-four, .five-five {
+  width: 20%;
+}
+
+/*Four colum layout - 25% */
+.four-one, .four-two, .four-three, .four-four {
+  width: 25%;
+}
+
+/*Three colum layout - 33% */
+.three-one, .three-two, .three-three {
+  width: 33.33%;
+}
+
+/*Two colum layout  - 50% */
+.two-one, .two-two {
+  width: 50%;
+}
+
+/*Text alignment*/
+.text-vertical-align-top {
+  vertical-align: top;
+}
+
+.text-vertical-align-bottom {
+  vertical-align: bottom;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.no-pad {
+  padding: 0;
+}
+
+.no-marg {
+  margin: 0;
+}
+
+.no-border {
+  border: none;
+}
+
+.grid {
+  position: absolute;
+  top: 1em;
+  width: 100%;
+  opacity: .5;
+}
+
+.show-grid {
+  height: 100vh;
+  opacity: .5;
+}
+
+.hide-grid {
+  display: none;
+}
+
+.show-row {
+  position: absolute;
+  top: 1em;
+  opacity: .5;
+  width: 100%;
+}
+
+.hide-row {
+  position: absolute;
+  top: 1em;
+  width: 100%;
+}
+
+.show-grid:nth-child(odd) {
+  background: red;
+  color: white;
+}
+
+.show-grid:nth-child(even) {
+  color: red;
+  background: white;
+}
+
+.show-row .col-container:nth-child(even) {
+  background: cyan;
+}
+
+/*---------------End Grid----------------------------------------------------------------------------------------------------*/
+h1, h2 {
+  padding: 0.5em;
+}
+
+p {
+  padding-left: 1em;
+  color: gray;
+}
+
+canvas {
+  margin: 1em 0em;
+  background: gray;
+  display: block;
+  border: 1px black solid;
+}
+
+ul {
+  padding-left: 3em;
+  line-height: 1em;
+  font-size: 1em;
+}
+
+ /*
+.global-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 56px;
+    z-index: 101;
+}
+
+*/
