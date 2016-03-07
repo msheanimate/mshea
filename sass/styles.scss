@@ -1,7 +1,7 @@
 /**
- * 
- * 
- * 
+ * html5doctor.com Reset Stylesheet v1.6.1 (http://html5doctor.com/html-5-reset-stylesheet/)
+ * Richard Clark (http://richclarkdesign.com)
+ * http://cssreset.com
  */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -80,11 +80,12 @@ input, select {
 }
 p{
         font-size: 1em;
+        line-height: 2em
 }
 
 h1{
-	font-size: 2em;
-
+    font-size: 2em;
+    padding: 1em 0em 1em 0em;
 }
 h2{
     font-size: 2.25em;
@@ -103,78 +104,80 @@ fieldset p{
 }
 
 .col-container{
-	display:table;
-	width: 100%;
-	color:green;
+    display:table;
+    width: 100%;
+    color:green;
+    margin:2em
 }
 /*------End RESET--------------------------------------------------------------------------------------------------------*/
 /*------GRID BEGIN--------------------------------------------------------------------------------------------------------*/
 
+/*By default each col has 100% width*/
 .col{
-	display:table-cell;
-	width:inherit;
-	padding:.25em;
-	border: 1px solid black;
-	vertical-align: middle;
+    display:table-cell;
+    width:inherit;
+    padding:.25em;
+    //border: 1px solid black;
+    vertical-align: middle;
 }
 /*Thirteen colum layout - 7.6% */
 .thirteen-one, .thirteen-two, .thirteen-three, .thirteen-four, .thirteen-five, .thirteen-six, .thirteen-seven, .thirteen-eight, .thirteen-nine, .thirteen-ten,
 .thirteen-eleven,.thirteen-twelve,.thirteen-thirteen
 {
-	width:7.6%;
+    width:7.6%;
 }
 /*Seven colum layout - 12.5% */
 .eight-one, .eight-two, .eight-three, .eight-four, .eight-five, .eight-six, .eight-seven, .eight-eight{
-	width:12.5%;
+    width:12.5%;
 }
 /*Seven colum layout - 14% */
 .seven-one, .seven-two, .seven-three, .seven-four, .seven-five, .seven-six, .seven-seven{
-	width:14.2%;
+    width:14.2%;
 }
 /*Six colum layout - 14% */
 .six-one, .six-two, .six-three, .six-four, .six-five, .six-six{
-	width:16.6%;
+    width:16.6%;
 }
 /*Five colum layout - 20% */
 .five-one, .five-two, .five-three, .five-four, .five-five{
-	width:20%;
+    width:20%;
 }
 /*Four colum layout - 25% */
 .four-one, .four-two, .four-three, .four-four{
-	width:25%;
+    width:25%;
 }
 /*Three colum layout - 33% */
 .three-one, .three-two, .three-three{
-	width:33.33%;
+    width:33.33%;
 }
 /*Two colum layout  - 50% */
 .two-one, .two-two{
-	width:50%;
+    width:50%;
 }
 /*Text alignment*/
 .text-vertical-align-top{
-	vertical-align: top;
+    vertical-align: top;
 }
 .text-vertical-align-bottom{
-	vertical-align: bottom;
+    vertical-align: bottom;
 }
 .text-center{
-	text-align:center;
+    text-align:center;
 }
 .text-left{
-	text-align:left;
+    text-align:left;
 }
 .text-right{
-	text-align:right;
+    text-align:right;
 }
 .no-pad{
-	padding:0;
+    padding:0;
 }
 .no-marg{
-	margin:0;
+    margin:0;
 }
 .no-border{
-	border:none;
+    border:none;
 }
 .grid {
     position: absolute;
@@ -183,14 +186,14 @@ fieldset p{
     opacity: .5;
 }
 .show-grid{
-	height:100vh;
-	opacity: .5;
+    height:100vh;
+    opacity: .5;
 }
 .hide-grid{
-	display:none;
+    display:none;
 }
 .show-row{
-	position: absolute;
+    position: absolute;
     top: 1em;
     opacity: .5;
     width:100%;
@@ -213,11 +216,12 @@ fieldset p{
 }
 
 /*---------------End Grid----------------------------------------------------------------------------------------------------*/
-/* cutsomer CSS */
+h1, h2{padding: 0.5em}
+p{padding-left: 1em; color: gray;}
+canvas {margin: 1em 0em; background: gray; display: block; border:1px black solid;}
+ul{padding-left: 3em; line-height: 1em; font-size: 1em}
 
-h1, p, ul,{padding: .5em 0 }
-li{padding: .5em 2em; list-style-type: none;}
-body{background-color: #f1f1f1}
+ /*
 .global-header {
     position: fixed;
     top: 0;
@@ -225,13 +229,8 @@ body{background-color: #f1f1f1}
     height: 56px;
     z-index: 101;
 }
-canvas {
-    padding:2em;
-    background: white;
-    display: block;  
-    border:1px solid black;  
-}
 
+*/
 
 
 

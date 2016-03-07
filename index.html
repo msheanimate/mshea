@@ -212,17 +212,30 @@
 		</div>
 	</div>
 	-->
-<h1> Conversant - Circle test </h1>
-<canvas id="canvas" width="800" height="600" ></canvas>
 
+<h1> Conversant - Circle test </h1>
 <p> I am using liveReaload (a grunt task) so feel free to update any .css, .js, or .html file and it will automatically refresh.</p>
 <p> This example should change the color of the shape on the click event.</p>
 
-<h2>Explanation:</h2>
-<p>I created a shape object which can create numerouse shapes (for now it can create a circle or square) and returns the shape.</br>
-It contains the following properties :
+<div>
+	<canvas id="canvas" width="800" height="600" style="margin-left: 20px"></canvas>
+</div>
+<h2>Here are the properties of Shape:</h2>
+<ul> 
+	<li>id : unique id created for each element (for testing purposes)</li>
+	<li>vx : the velocity value of X</li>
+	<li>vy : the velocity value of Y</li>
+	<li>x : initial x position</li>
+	<li>y : initial y position</li>
+	<li>width : radius * 2</li>
+	<li>height : radius * 2</li>
+	<li>radius : radius of circle</li>
+	<li>fill : fill color</li>
+	<li>stroke : stroke color</li>
+	<li>strokewidth : stoke value</li>
+</ul>
+<p> There are random values for all of these. </p>
 
-<h2>Call:</h2>
-<p>new shape("circle"+i, x, y, r, vx, vy, color, color, 1)</p>
+
 <script src="js/test.js"></script>
 </body>

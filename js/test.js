@@ -4,10 +4,10 @@
         var h = canvas.height;
         var ctx = canvas.getContext("2d");
         var container = {x:0,y:0,width:w,height:h};
-        var shape = [];
-        var rect = (function () {
+        var shapes = [];
+        var shape = (function () {
             // constructor
-            function rect(id, x, y, r, vx, vy, fill, stroke, strokewidth) {
+            function shape(id, x, y, r, vx, vy, fill, stroke, strokewidth) {
                 this.x = x;
                 this.y = y;
                 this.vx = vx;
@@ -23,14 +23,14 @@
                 return (this);
             }
             //
-            rect.prototype.redraw = function (x, y) {
+            shape.prototype.redraw = function (x, y) {
                 this.x = x || this.x;
                 this.y = y || this.y;
                 this.draw(this.fill);
                 return (this);
             }
             //
-            rect.prototype.highlight = function (x, y) {
+            shape.prototype.highlight = function (x, y) {
                 this.fill = 'hsl(' + Math.floor(Math.random() * ((255-0)+1) + 0) + ',100%,50%)';
                 this.x = x || this.x;
                 this.y = y || this.y;
@@ -38,14 +38,14 @@
                 return (this);
             }
             //
-            rect.prototype.move = function (x, y, vx, vy) {
+            shape.prototype.move = function (x, y, vx, vy) {
                 this.x = x + vx;
                 this.y = y + vy;  
                 this.draw(this.fill);
                 return (this);
             }
             //
-            rect.prototype.draw = function (stroke) {
+            shape.prototype.draw = function (stroke) {
 
                 ctx.save();
                 ctx.beginPath();
@@ -60,12 +60,12 @@
                 ctx.closePath();
                 ctx.fill();
                 ctx.restore();
-                ctx.globalAlpha = 0.5;
+                ctx.globalAlpha = 0.75;
             }
             //
-            rect.prototype.isPointInside = function (x, y) {
+            shape.prototype.isPointInside = function (x, y) {
 
-                /**
+               
                 //Here is the pythagorean theorem, doesnt seem like it lining up correctly.  Still looking into it though
 
 
@@ -76,13 +76,13 @@
                   console.log(this.radius)
 
                   return dist < this.radius;
-                */
-                
+              
+
                 //detecting a square target, want to pythagorean theorm to get more accurate, not working out though.
-                return (x >= this.x && x <= this.x + this.width && y >= this.y && y <= this.y + this.height);
+                //return (x >= this.x && x <= this.x + this.width && y >= this.y && y <= this.y + this.height);
 			      }
             //
-            return rect;
+            return shape;
         })();
 
         function handleMouseDown(e) {
@@ -92,12 +92,12 @@
             mouseY = parseInt(e.clientY - offsetY);
 
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            for (var i = 0; i < shape.length; i++) {
-                if (shape[i].isPointInside(mouseX, mouseY)) {
-                    shape[i].highlight();
+            for (var i = 0; i < shapes.length; i++) {
+                if (shapes[i].isPointInside(mouseX, mouseY)) {
+                    shapes[i].highlight();
 
                 } else {
-                    shape[i].redraw();
+                    shapes[i].redraw();
                 }
             }
         }
@@ -112,21 +112,21 @@
                 var vy = Math.floor(Math.random() * 4) + 2;
                 var color = Math.floor(Math.random() * ((255-0)+1) + 0)
                 //adjust the vx, and vy to slow circles down.  0 just stops them.
-                shape.push(new rect("circle", x, y, r, vx, vy, color, color, 1)); 
+                shapes.push(new shape("circle", x, y, r, vx, vy, color, color, 1)); 
             }
 
             function draw(){
                 ctx.clearRect(0, 0, w, h);
-                for (var i = 0; i < shape.length; i++) {
-                    if((shape[i].x + shape[i].vx + shape[i].radius > container.x + container.width  - shape[i].radius) || (shape[i].x - shape[i].radius + shape[i].vx < container.x - shape[i].radius)){
-                        shape[i].vx = - shape[i].vx;
+                for (var i = 0; i < shapes.length; i++) {
+                    if((shapes[i].x + shapes[i].vx + shapes[i].radius > container.x + container.width  - shapes[i].radius) || (shapes[i].x - shapes[i].radius + shapes[i].vx < container.x - shapes[i].radius)){
+                        shapes[i].vx = - shapes[i].vx;
                     }
-                    if((shape[i].y + shape[i].vy + shape[i].radius > container.y + container.height - shape[i].radius) || (shape[i].y - shape[i].radius + shape[i].vy < container.y - shape[i].radius)){
-                        shape[i].vy = - shape[i].vy;
+                    if((shapes[i].y + shapes[i].vy + shapes[i].radius > container.y + container.height - shapes[i].radius) || (shapes[i].y - shapes[i].radius + shapes[i].vy < container.y - shapes[i].radius)){
+                        shapes[i].vy = - shapes[i].vy;
                     }
-                    shape[i].x +=shape[i].vx;
-                    shape[i].y +=shape[i].vy;
-                    shape[i].move(shape[i].x , shape[i].y, 0, 0);
+                    shapes[i].x +=shapes[i].vx;
+                    shapes[i].y +=shapes[i].vy;
+                    shapes[i].move(shapes[i].x , shapes[i].y, 0, 0);
                 }
                 requestAnimationFrame(draw);
             }
