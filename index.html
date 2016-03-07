@@ -4,6 +4,225 @@
 <title>Event driven shapes : CANVAS</title>
 <link rel="stylesheet" href="css/styles.css">
 <body>
-<canvas id="canvas" width="1200" height="800" ></canvas>
+<!-- this is a 16 column responsive grid that im working.  Doesnt really pertain to the test.
+/**
+ * v. 1.0.6 3/16/2015
+ * 16 column neste responsive grid. - shows a 16 red columns and different column layouts.
+ * show what the layout of my personal responsive grid.
+ * (Does not really pertain to this test, but its always good to have ) 
+ */
+ -->
+ <!--
+	<h1>sixteen column layout (nested)...</h1>
+	<div class="show-grid">
+		<div class="col-container no-border">
+			<div class="col eight-one no-pad no-border">
+				<div class=" grid-color col-container text-center">
+					<div class="col two-one no-border show-grid"> 1 </div>
+					<div class="col two-two show-grid"> 2</div>
+				</div>			
+			</div>
+			<div class="col eight-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 3 </div>
+					<div class="col two-two show-grid"> 4</div>
+				</div>	
+			</div>
+			<div class="col eight-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid "> 5 </div>
+					<div class="col two-two show-grid"> 6 </div>
+				</div>	
+			</div>
+			<div class="col eight-four no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 7 </div>
+					<div class="col two-two show-grid"> 8 </div>
+				</div>	
+			</div>
+			<div class="col eight-five no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 9 </div>
+					<div class="col two-two show-grid"> 10 </div>
+				</div>	
+			</div>
+			<div class="col eight-six no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 11 </div>
+					<div class="col two-two show-grid"> 12 </div>
+				</div>	
+			</div>
+			<div class="col eight-seven no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 13 </div>
+					<div class="col two-two show-grid"> 14 </div>
+				</div>	
+			</div>
+			<div class="col eight-eight no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 15 </div>
+					<div class="col two-two show-grid"> 16 </div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="show-row">
+		<div class="col-container no-border">
+			<div class="col eight-one no-pad no-border">
+				<div class=" grid-color col-container text-center">
+					<div class="col two-one no-border"> 1 </div>
+					<div class="col two-two"> 2</div>
+				</div>			
+			</div>
+			<div class="col eight-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 3 </div>
+					<div class="col two-two"> 4</div>
+				</div>	
+			</div>
+			<div class="col eight-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border "> 5 </div>
+					<div class="col two-two"> 6 </div>
+				</div>	
+			</div>
+			<div class="col eight-four no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 7 </div>
+					<div class="col two-two "> 8 </div>
+				</div>	
+			</div>
+			<div class="col eight-five no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 9 </div>
+					<div class="col two-two"> 10 </div>
+				</div>	
+			</div>
+			<div class="col eight-six no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 11 </div>
+					<div class="col two-two"> 12 </div>
+				</div>	
+			</div>
+			<div class="col eight-seven no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 13 </div>
+					<div class="col two-two"> 14 </div>
+				</div>	
+			</div>
+			<div class="col eight-eight no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 15 </div>
+					<div class="col two-two"> 16 </div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-container">
+			<div class="col thirteen-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col thirteen-two text-center"> 2 </div>
+			<div class="col thirteen-three text-center"> 3 </div>
+			<div class="col thirteen-four text-center"> 4 </div>
+			<div class="col thirteen-five text-center"> 5 </div>
+			<div class="col thirteen-six text-center"> 6 </div>
+			<div class="col thirteen-seven text-center"> 7 </div>
+			<div class="col thirteen-eight text-center"> 8 </div>
+			<div class="col thirteen-nine text-center"> 9 </div>
+			<div class="col thirteen-ten text-center"> 10 </div>
+			<div class="col thirteen-eleven text-center"> 11 </div>
+			<div class="col thirteen-twelve text-center"> 12 </div>
+			<div class="col thirteen-thirteen text-center"> 13 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col eight-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col eight-two text-center"> 2 </div>
+			<div class="col eight-three text-center"> 3 </div>
+			<div class="col eight-four text-center"> 4 </div>
+			<div class="col eight-five text-center"> 5 </div>
+			<div class="col eight-six text-center"> 6 </div>
+			<div class="col eight-seven text-center"> 7 </div>
+			<div class="col eight-eight text-center"> 8 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col seven-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col seven-two text-center"> 2 </div>
+			<div class="col seven-three text-center"> 3 </div>
+			<div class="col seven-four text-center"> 4 </div>
+			<div class="col seven-five text-center"> 5 </div>
+			<div class="col seven-six text-center"> 6 </div>
+			<div class="col seven-seven text-center"> 7 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col six-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col six-two text-center"> 2 </div>
+			<div class="col six-three text-center"> 3 </div>
+			<div class="col six-four text-center"> 4 </div>
+			<div class="col six-five text-center"> 5 </div>
+			<div class="col six-six text-center"> 6 </div>
+		</div>
+		<div class="col-container no-border">
+			<div class="col three-one no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 1 </div>
+					<div class="col two-two no-border"> 2</div>
+				</div>			
+			</div>
+			<div class="col three-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 3 </div>
+					<div class="col two-two no-border"> 4</div>
+				</div>	
+			</div>
+			<div class="col three-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 5 </div>
+					<div class="col two-two no-border"> 6 </div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-container">
+			<div class="col five-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col five-two text-center"> 2 </div>
+			<div class="col five-three text-center"> 3 </div>
+			<div class="col five-four text-center"> 4 </div>
+			<div class="col five-five text-center"> 5 </div>
+		</div>
+		<div class="col-container">
+			<div class="col four-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col four-two text-center"> 2 </div>
+			<div class="col four-three text-center"> 3 </div>
+			<div class="col four-four text-center"> 4 </div>
+		</div>
+		<div class="col-container">
+			<div class="col three-one text-vertical-align-top">1</div>
+			<div class="col three-two">2</div>
+			<div class="col three-three">3</div>
+		</div>
+		<div class="col-container">
+			<div class="col two-one">1</div>
+			<div class="col two-two">2</div>
+		</div>
+
+		<div class="col-container">
+			<div class="col">1</div>
+		</div>
+
+		</div>
+	</div>
+	-->
+<h1> Conversant - Circle test </h1>
+<canvas id="canvas" width="800" height="600" ></canvas>
+
+<p> I am using liveReaload (a grunt task) so feel free to update any .css, .js, or .html file and it will automatically refresh.</p>
+<p> This example should change the color of the shape on the click event.</p>
+
+<h2>Explanation:</h2>
+<p>I created a shape object which can create numerouse shapes (for now it can create a circle or square) and returns the shape.</br>
+It contains the following properties :
+
+<h2>Call:</h2>
+<p>new shape("circle"+i, x, y, r, vx, vy, color, color, 1)</p>
 <script src="js/test.js"></script>
 </body>
