@@ -1,0 +1,73 @@
+{
+	"navigation":{
+		"about":"", 
+		"work":"",
+		"gallery":"",
+		"resume": ""
+	},
+	"homepage":{
+		"page_title":"homepage", 
+		"title":"Doe", 
+		"address":{
+			"state":"IL", 
+			"city": "Chicago", 
+			"street": "3734 Shefield Ave"
+	    } 
+	},
+	"about":{
+		"page_title":"about", 
+		"name":"Matt Shea"
+	},
+	"gallery":
+		[{
+			"proj_one":{
+				"title": "",
+				"image": "",
+				"description": ""
+			},
+			"proj_two":{
+				"title": "",
+				"image": "",
+				"description": ""
+			},
+			"proj_three":{
+				"title": "",
+				"image": "",
+				"description": ""
+			},
+			"proj_four":{
+				"title": "",
+				"image": "",
+				"description": ""
+			},
+			"proj_five":{
+				"title": "",
+				"image": "",
+				"description": ""
+			}
+		}],
+	"flowers":{
+		"red_roses":{
+			"name": "Red Roses",
+			"price": 39.95,
+			"color": "Red",
+			"img": "images/redRoses.jpg",
+			"link": "redRose"
+		},
+		"rainbow_roses":{
+			"name": "Rainbow Roses",
+			"price": 29.95,
+			"color": "orange",
+			"link": "rainbowRose"
+
+		},
+		"hierloom_roses":{
+			"name": "Heirloom roses",
+			"price": 19.95,
+			"img": "images/heirloomRoses.jpg",
+			"link": "heirloomRose"
+
+		}
+
+	}
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<head><script src="libs/modernizr-custom.js "></script></head>
+<link rel="stylesheet" href="css/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+<script src="libs/jquery-1.11.3.js"></script>	
+<script src="js/main.js "></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body>
+	<!--
+	<h1>sixteen column layout (nested)...</h1>
+	<div class="show-grid">
+		<div class="col-container no-border">
+			<div class="col eight-one no-pad no-border">
+				<div class=" grid-color col-container text-center">
+					<div class="col two-one no-border show-grid"> 1 </div>
+					<div class="col two-two show-grid"> 2</div>
+				</div>			
+			</div>
+			<div class="col eight-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 3 </div>
+					<div class="col two-two show-grid"> 4</div>
+				</div>	
+			</div>
+			<div class="col eight-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid "> 5 </div>
+					<div class="col two-two show-grid"> 6 </div>
+				</div>	
+			</div>
+			<div class="col eight-four no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 7 </div>
+					<div class="col two-two show-grid"> 8 </div>
+				</div>	
+			</div>
+			<div class="col eight-five no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 9 </div>
+					<div class="col two-two show-grid"> 10 </div>
+				</div>	
+			</div>
+			<div class="col eight-six no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 11 </div>
+					<div class="col two-two show-grid"> 12 </div>
+				</div>	
+			</div>
+			<div class="col eight-seven no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 13 </div>
+					<div class="col two-two show-grid"> 14 </div>
+				</div>	
+			</div>
+			<div class="col eight-eight no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border show-grid"> 15 </div>
+					<div class="col two-two show-grid"> 16 </div>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="show-row">
+		<div class="col-container no-border">
+			<div class="col eight-one no-pad no-border">
+				<div class=" grid-color col-container text-center">
+					<div class="col two-one no-border"> 1 </div>
+					<div class="col two-two"> 2</div>
+				</div>			
+			</div>
+			<div class="col eight-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 3 </div>
+					<div class="col two-two"> 4</div>
+				</div>	
+			</div>
+			<div class="col eight-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border "> 5 </div>
+					<div class="col two-two"> 6 </div>
+				</div>	
+			</div>
+			<div class="col eight-four no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 7 </div>
+					<div class="col two-two "> 8 </div>
+				</div>	
+			</div>
+			<div class="col eight-five no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 9 </div>
+					<div class="col two-two"> 10 </div>
+				</div>	
+			</div>
+			<div class="col eight-six no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 11 </div>
+					<div class="col two-two"> 12 </div>
+				</div>	
+			</div>
+			<div class="col eight-seven no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 13 </div>
+					<div class="col two-two"> 14 </div>
+				</div>	
+			</div>
+			<div class="col eight-eight no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 15 </div>
+					<div class="col two-two"> 16 </div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-container">
+			<div class="col thirteen-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col thirteen-two text-center"> 2 </div>
+			<div class="col thirteen-three text-center"> 3 </div>
+			<div class="col thirteen-four text-center"> 4 </div>
+			<div class="col thirteen-five text-center"> 5 </div>
+			<div class="col thirteen-six text-center"> 6 </div>
+			<div class="col thirteen-seven text-center"> 7 </div>
+			<div class="col thirteen-eight text-center"> 8 </div>
+			<div class="col thirteen-nine text-center"> 9 </div>
+			<div class="col thirteen-ten text-center"> 10 </div>
+			<div class="col thirteen-eleven text-center"> 11 </div>
+			<div class="col thirteen-twelve text-center"> 12 </div>
+			<div class="col thirteen-thirteen text-center"> 13 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col eight-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col eight-two text-center"> 2 </div>
+			<div class="col eight-three text-center"> 3 </div>
+			<div class="col eight-four text-center"> 4 </div>
+			<div class="col eight-five text-center"> 5 </div>
+			<div class="col eight-six text-center"> 6 </div>
+			<div class="col eight-seven text-center"> 7 </div>
+			<div class="col eight-eight text-center"> 8 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col seven-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col seven-two text-center"> 2 </div>
+			<div class="col seven-three text-center"> 3 </div>
+			<div class="col seven-four text-center"> 4 </div>
+			<div class="col seven-five text-center"> 5 </div>
+			<div class="col seven-six text-center"> 6 </div>
+			<div class="col seven-seven text-center"> 7 </div>
+		</div>
+
+		<div class="col-container">
+			<div class="col six-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col six-two text-center"> 2 </div>
+			<div class="col six-three text-center"> 3 </div>
+			<div class="col six-four text-center"> 4 </div>
+			<div class="col six-five text-center"> 5 </div>
+			<div class="col six-six text-center"> 6 </div>
+		</div>
+		<div class="col-container no-border">
+			<div class="col three-one no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 1 </div>
+					<div class="col two-two no-border"> 2</div>
+				</div>			
+			</div>
+			<div class="col three-two no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 3 </div>
+					<div class="col two-two no-border"> 4</div>
+				</div>	
+			</div>
+			<div class="col three-three no-pad no-border">
+				<div class="col-container text-center">
+					<div class="col two-one no-border"> 5 </div>
+					<div class="col two-two no-border"> 6 </div>
+				</div>	
+			</div>
+		</div>
+		<div class="col-container">
+			<div class="col five-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col five-two text-center"> 2 </div>
+			<div class="col five-three text-center"> 3 </div>
+			<div class="col five-four text-center"> 4 </div>
+			<div class="col five-five text-center"> 5 </div>
+		</div>
+		<div class="col-container">
+			<div class="col four-one text-vertical-align-top text-center"> 1 </div>
+			<div class="col four-two text-center"> 2 </div>
+			<div class="col four-three text-center"> 3 </div>
+			<div class="col four-four text-center"> 4 </div>
+		</div>
+		<div class="col-container">
+			<div class="col three-one text-vertical-align-top">1</div>
+			<div class="col three-two">2</div>
+			<div class="col three-three">3</div>
+		</div>
+		<div class="col-container">
+			<div class="col two-one">1</div>
+			<div class="col two-two">2</div>
+		</div>
+
+		<div class="col-container">
+			<div class="col">1</div>
+		</div>
+
+		</div>
+	</div>-->
+
+	<div id="site" class="site">
+	    <div class="logo">  
+	     <!-- <img src="images/site/logo.png" width="207" height="124" alt="Hansel and Petal" />-->
+	    </div>
+	    <h1>Navigation</h1>
+	    <nav>
+	    	<ul id="navigation">
+	    	</ul>
+
+	    </nav>
+	    <h1>Form</h1>
+	    <form id="frmContact" name="frmContact" method="post" action="#">
+	    	<fieldset id="personalInfo">
+	    		<legend><strong>Personal Information </strong></legend>
+	    		<p>
+	    			<label for="name">Name</label>
+	    			<input name="name" type="text" class="text" id="name" tabindex="10">
+	    		</p>
+	    		<p>
+	    			<label for="email">Email</label>
+	    			<input name="email" value="your email" type="text" class="text" id="email" tabindex="10">
+	    		</p>
+	    		<p>
+	    			<label for="phone">Phone</label>
+	    			<input name="phone" type="text" class="text" id="phone" tabindex="10">
+	    		</p>
+	    		<p>
+	    			<label for="address">Address</label>
+	    			<input name="address" type="text" class="text" id="address" tabindex="10">
+	    		</p>
+
+		        <p id="errorMessage"><span></span></p>
+		        <input type="submit" name="submit2" id="submitBtn" value="send" />	
+	    	</fieldset>
+	    	<fieldset id="generalInfo">
+	    		<p> check here to see more details <input type="checkbox" name="expandList" id="expandList"/>
+	    		<div id="selection">
+		    		<p>
+			    		<input type="checkbox" name="backack" id="backpack"/>
+			    		<label for"backpack">Backpack</label>
+			    	</p>
+			    	<p>
+			    		<input type="checkbox" name="calm" id="calm"/>
+			    		<label for"calm">Calm</label>
+			    	</p>
+	    		</div>
+	    	</fieldset>
+	    </form>
+
+  	</div> 
+  	<p>Hover over a rect = mouseover</p>
+<p>Click on a rect = mouseclick</p>
+<!--<canvas id="canvas" width=300 height=300></canvas> -->
+<img src="images/img.jpg" id="mainImage"/>
+
+
+
+	<script src="libs/jquery-1.11.3.js"></script>
+	<script src="libs/underscore.js"></script>
+	<script src="libs/backbone.js"></script>
+	<!--<script src="js/models/singleFlowerModel.js"></script>
+	<!--<script src="js/views/singleFlowerView.js"></script>
+	<!--<script src="js/views/allFlowersView.js"></script>
+	<!--<script src="js/collections/allFlowers.js"></script>
+	<!--<script src="js/routes/router.js"></script>
+	<!--<script src="js/flowerApp.js"></script>
+	<script src="js/strings.js"></script>
+	<script src="js/date.js"></script> 
+	<script src="js/objects.js"></script>-->
+	<script src="js/createNode.js"></script> <!-- this has to be before dom -->
+	<script src="js/reg_exp.js"></script>
+	<script src="js/dom.js"></script>
+	<script src="js/eventListeners.js"></script>
+	<script src="js/forms.js"></script>
+	<script src="js/functions.js"></script>
+	<!--<script src="js/animation.js"></script>-->
+	<!--<script src="js/animateBalls.js"></script>-->
+	<!--<script src="js/test.js"></script> -->
+	
+	<!--<script src="js/closures.js"></script>-->
+	<!--<script src="js/arrays.js"></script>-->
+
+
+<!--
+<div class="example">
+	<h2>&lt; i &gt; - “alternate voice” or “mood”</h2>
+	<p><i>I hope,</i> This works </p>
+</div>
+
+<div class="example">
+	<h2>&lt; b &gt; - make the first paragraph an article lead, which needs to be “stylistically offset” from the following paragraphs.</h2>
+	<p><b class="lead">This event takes place on Saturday and 3,000 people have registered already</b></p>
+</div>
+
+<div class="example">
+	<h2>&lt; em &gt; - “stress emphasis"</h2>
+	<h2>&lt; strong &gt; - “strong emphasis"</h2>
+	<p>Make sure to sign up 5 days <em>before</em> <strong>May, 31, 2015</strong>.</p>
+</div>
+-->
+</body>
